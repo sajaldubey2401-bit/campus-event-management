@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse campus workshops, performances and activities, check available seats, and register for an event.">
+  <title>Campus Events | LPU</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <p>LOVELY PROFESSIONAL UNIVERSITY</p>
+    <h1>Campus Events</h1>
+    <p>Find your next campus adventure.</p>
+  </header>
+  <main>
+    <section>
+      <h2>Upcoming events</h2>
+      <div class="events">
+        <article class="event">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Students taking a campus photography walk">
+          <div class="event-content">
+            <p>5 November 2026</p><h3>Campus Photography Walk</h3>
+            <p>Learn photography tips. All students. Venue: Main Gate.</p>
+            <p><span class="seats">30</span> of <span class="limit">30</span> seats available</p>
+          </div>
+        </article>
+        <article class="event">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Students learning web design in a computer lab">
+          <div class="event-content">
+            <p>12 November 2026</p><h3>Introduction to Web Design</h3>
+            <p>Learn HTML and CSS. Beginners welcome. Venue: Computer Lab.</p>
+            <p><span class="seats">24</span> of <span class="limit">24</span> seats available</p>
+          </div>
+        </article>
+        <article class="event">
+          <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Students at a campus gathering">
+          <div class="event-content">
+            <p>20 November 2026</p><h3>Open Mic Evening</h3>
+            <p>Share a song, poem or story. All students. Venue: Student Centre.</p>
+            <p><span class="seats">40</span> of <span class="limit">40</span> seats available</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="panel" id="registration">
+      <h2>Register for an event</h2>
+      <form id="registration-form">
+        <label for="event">Choose an event</label>
+        <select id="event" required>
+          <option value="">Select an event</option>
+          <option value="0">Campus Photography Walk</option>
+          <option value="1">Introduction to Web Design</option>
+          <option value="2">Open Mic Evening</option>
+        </select>
+        <label for="student-name">Your name</label>
+        <input id="student-name" placeholder="Enter your name" required>
+        <label for="student-email">Email address</label>
+        <input id="student-email" type="email" placeholder="Enter your email e.g. xyz@gmail.com" required>
+        <button>Register</button>
+      </form>
+      <p id="message" role="status"></p>
+      <div id="confirmation" hidden>
+        <h3>Registration confirmation</h3>
+        <p id="receipt"></p>
+        <button id="download" type="button">Download confirmation</button>
+      </div>
+    </section>
+    <section class="panel" id="custom-event-panel">
+      <h2>Create a custom event</h2>
+      <form id="custom-event-form">
+        <label for="custom-title">Event name</label>
+        <input id="custom-title" required>
+        <label for="custom-date">Event date</label>
+        <input id="custom-date" type="date" required>
+        <label for="custom-venue">Venue</label>
+        <input id="custom-venue" required>
+        <label for="custom-description">Description</label>
+        <textarea id="custom-description" required></textarea>
+        <label for="custom-seat-limit">Seat limit</label>
+        <input id="custom-seat-limit" type="number" min="1" required>
+        <button type="submit">Add custom event</button>
+      </form>
+      <p id="custom-message" role="status"></p>
+    </section>
+  </main>
+  <footer><p>Campus Events · Lovely Professional University</p></footer>
+</body>
+</html>
